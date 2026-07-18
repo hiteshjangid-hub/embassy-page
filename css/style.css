@@ -1371,14 +1371,7 @@ a.overview-btn {
     box-shadow: 0px 15px 20px -17px rgb(0 0 0 / 8%);
 }
 
-.floor-plan-img {
-    /* mix-blend-mode: darken; */
-    padding: 40px 0;
-    /* background: #5d4838c7; */
-    /* border-radius: 10px; */
-    /* outline: 10px solid #5d483836; */
-    /*outline-offset: 0px;*/
-}
+
 
 .floor-details {
     width: 100%;
@@ -1627,7 +1620,7 @@ section.footer {
 }
 
 p.btm-foot {
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     color: #fff;
     line-height: 23px;
@@ -2893,7 +2886,7 @@ button#SubmitQuery3 {
     /* Location Section */
     .location-image {
         background-size: 300px;
-        height: 300px;
+        /* height: 300px; */
         padding: 20px;
         margin-top: 20px;
     }
@@ -3029,11 +3022,18 @@ button#SubmitQuery3 {
     transform: translateX(5px);
 }
 .floor-area-text {
-    margin-top: 10px;
     font-size: 16px;
     font-weight: 500;
-    color: #333;
-    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.floor-area-text p{
+     background-color: #0B3022;
+     width: fit-content;
+      padding: 5px 10px;  
 }
 
 @media (max-width: 768px) {
@@ -3046,7 +3046,7 @@ button#SubmitQuery3 {
         font-size: 13px;
     }
     .download-plan-btn img {
-        width: 20px;
+        width: 19px;
     }
     .img-fluid1 {
         max-width: 100%;
