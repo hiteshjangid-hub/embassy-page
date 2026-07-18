@@ -38,6 +38,7 @@
 <link rel="stylesheet" href="css/intlTelInput.css">
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://kit.fontawesome.com/5bd5ea8d45.js" crossorigin="anonymous"></script>
 <style>
   .iti {
     width: 100%;
@@ -170,12 +171,12 @@
         Embassy Knowledge Park
       </h1>
       <p style="font-size:20px; margin-bottom: 10px;">
-        Chapparkallu Main Road, North Banagalore </p>
+        <i class="fa-solid fa-location-dot" style="color:#C4A37F;"></i>  Chapparkallu Main Road, North Banagalore </p>
 
       <div class="project-key-highlights" id="projectKeyHighlights">
         <div class="key-high">
           <img src="images/icons/1.png" alt="">
-          <p><b>Land Area: </b> 200 Acres Premium Township</p>
+          <p><b>Land Area: </b> 200-Acre Integrated Luxury Township</p>
         </div>
         <div class="key-high">
           <img src="images/icons/1.png" alt="">
@@ -188,6 +189,10 @@
         <div class="key-high">
           <img src="images/icons/1.png" alt="">
           <p>Near Stonehill International School</p>
+        </div>
+        <div class="key-high">
+          <i class="fa-solid fa-plane-departure" style="color:#C4A37F;"></i>
+          <p> 15–20 Min to International Airport</p>
         </div>
       </div>
 
@@ -353,7 +358,7 @@
             </p>
 
             <a class="overview-btn d-flex align-items-center" href="#" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">Download Brochure <img class="img-fluid" src="images/icons/pdf-file.png"
+              data-bs-target="#exampleModal">Download Brochure <img class="img-fluidanimation" src="images/icons/pdf-file.png"
                 alt="">
             </a>
           </div>
@@ -383,25 +388,34 @@
           <div class="highlight-text-section" id="dynamicHighlights">
             <div class="high-points">
               <img src="images/icons/right.png" alt="">
-              <p>Tech and aerospace professionals in the North Bangalore corridor</p>
+              <p>200-Acre Integrated Luxury Township in North Bangalore</p>
             </div>
             <div class="high-points">
               <img src="images/icons/right.png" alt="">
-              <p>Families searching for large villas with plenty of space</p>
+              <p>Nature Inspired Living With Vast Open Green Spaces</p>
             </div>
             <div class="high-points">
               <img src="images/icons/right.png" alt="">
-              <p>New home buyers searching for 2 and 3 BHK apartments
+              <p>Roughly 19 Acres Of Green Space With over 4000 Planned Trees</p>
+            </div>
+            <div class="high-points">
+              <img src="images/icons/right.png" alt="">
+              <p>40000  SQ.FT. Of Signature Clubsouse 
               </p>
             </div>
             <div class="high-points">
               <img src="images/icons/right.png" alt="">
-              <p>Investors interested in long cycle growth corridor near the airport
+              <p>Excellent connectivity to Yelahanka, Manyata Tech Park & KIADB Aerospace Park
               </p>
             </div>
             <div class="high-points">
               <img src="images/icons/right.png" alt="">
-              <p>Buyers wanting an integrated solution rather than a separate residential property
+              <p>75% Open Green Spaces with landscaped gardens and walking trails
+              </p>
+            </div>
+            <div class="high-points">
+              <img src="images/icons/right.png" alt="">
+              <p>Grand Clubhouse with 40+ Lifestyle Amenities
               </p>
             </div>
 
@@ -442,7 +456,7 @@
 
             <div class="sizing">
               <h4>Size :</h4>
-              <p>1330 - 1598 SQ.Ft.</p>
+              <p><b>1330 - 1598 SQ.Ft.</b></p>
             </div>
 
             <div class="price-query-btn">
@@ -469,7 +483,7 @@
 
             <div class="sizing">
               <h4>Size :</h4>
-              <p>1896 - 2250 SQ.Ft.</p>
+              <p><b>1896 - 2250 SQ.Ft.</b></p>
             </div>
 
             <div class="price-query-btn">
@@ -496,7 +510,7 @@
 
             <div class="sizing">
               <h4>Size :</h4>
-              <p>On Request</p>
+              <p><b>4200 - 6800 SQ.FT.</b></p>
             </div>
 
             <div class="price-query-btn">
@@ -613,7 +627,10 @@
               <img src="images/icons/download.png" alt="Download" class="img-fluidanimation">
             </a>
           </div>
-          <div class="floor-area-text">1330 - 1598 SQ./FT.*/</div>
+          <div class="floor-area-text">
+            <p>
+              1330 - 1598 SQ./FT.*
+            </p></div>
         </div>
         <div class="tab-pane fade" id="tab-3-bhk" role="tabpanel" aria-labelledby="tab-3-bhk-btn">
           <div class="floor-sec">
@@ -624,7 +641,9 @@
               <img src="images/icons/download.png" alt="download " class="img-fluidanimation">
             </a>
           </div>
-          <div class="floor-area-text">1896 - 2250 SQ./FT.</div>
+          <div class="floor-area-text">
+            <p>1896 - 2250 SQ./FT.</p>
+          </div>
         </div>
 
         <div class="tab-pane fade" id="tab-5-bhk" role="tabpanel" aria-labelledby="tab-5-bhk-btn">
@@ -637,7 +656,7 @@
             </a>
           </div>
           <div class="floor-area-text">
-            On Request
+            <p>4200 - 6800 SQ.FT.</p>
           </div>
         </div>
       </div>
@@ -1531,13 +1550,37 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
+      // Initial show after 3 seconds, then repeat every 8 seconds
+      function showModal() {
         var modalEl = document.getElementById('exampleModal');
-        if (modalEl && typeof bootstrap !== 'undefined') {
+        if (!modalEl) return;
+
+        // Prefer Bootstrap's JS if available (works for desktop/tablet/phone)
+        if (typeof bootstrap !== 'undefined') {
           var myModal = bootstrap.Modal.getOrCreateInstance(modalEl);
           myModal.show();
+          return;
         }
-      }, 8000);
+
+        // Fallback for when Bootstrap JS isn't loaded (ensures modal opens on phone/tablet)
+        // Add classes/attributes that mimic a shown Bootstrap modal and create a backdrop.
+        modalEl.classList.add('show');
+        modalEl.style.display = 'block';
+        modalEl.setAttribute('aria-modal', 'true');
+        modalEl.removeAttribute('aria-hidden');
+
+        // Ensure a backdrop exists
+        if (!document.querySelector('.custom-backdrop')) {
+          var backdrop = document.createElement('div');
+          backdrop.className = 'modal-backdrop fade show custom-backdrop';
+          document.body.appendChild(backdrop);
+        }
+      }
+
+      setTimeout(function () {
+        showModal();
+        setInterval(showModal, 12000);
+      }, 3000);
     });
   </script>
 
